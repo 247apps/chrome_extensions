@@ -1,0 +1,128 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Title 1004MC PDF Generator Tab</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 800px;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="popup.js"></script>
+    
+    <script>
+window.resizeTo(1200, 1200); //notwork
+</script>
+
+<script>
+var newheight = window.height * (2/10); //notwork
+var newwidth = window.width * (2/10);
+window.resizeTo(newheight, newwidth);
+</script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  </head>
+  <body style="width:600px; height:1000px">
+  
+  <div id="header" style="max-width:100%;">
+	
+	<div id="toplogo" style="float:left;width:50%;">
+		<a href="http://www.YOUR-DOMAIN-NAME.COM"><img src='http://www.YOUR-DOMAIN-NAME.COM/images/homepage/bradford_logo.png' style="height: 50px;" ></a>
+	</div>
+    
+
+	
+   <div id="topphone" style="float: right; width:50%;">	
+		
+		<table cellspacing="0" cellpadding="0" align="right" border="0">
+		<tbody><tr>
+			<td style="padding-left: 195px;" align="right"><a href="http://www.YOUR-DOMAIN-NAME.COM//about/"><img src="/images/homepage/calltollfree.png" alt="Call us toll free: 800-622-8727" align="left" height="51" border="0" width="170"></a></td>
+		</tr>
+		<tr>
+			
+		</tr>
+		</tbody></table>
+
+	</div>
+     </div>
+     
+     <hr style="clear:both;border:1px #9D063B solid;"/>
+  
+  <a href="http://YOUR-DOMAIN-NAME.COM/secure/ws/mat/test_scripts/test_mat_ws_htmlView.php" target="_blank"><button style="background:#9D063B;color:#fff;font-weight:bold;" class="btn btn-primary">1004MC Test Tool</button></a>
+<br/><br/>
+  
+    <!--<div id="status"></div>
+    <img id="image-result" hidden>
+    -->
+    
+    <!-- <form action="http://www.ADD-YOUR-MLS-PROCESSOR-HERE.php" target="_blank" method="post" enctype="multipart/form-data" name="form1" style="border:1px #0065bd solid; width:600px; padding:10px; margin:0px;"> -->
+    
+    <form action="http://YOUR-DOMAIN-NAME.COM/secure/ws/mat/test_scripts/test_mat_ws_htmlView.php" target="_blank" method="post" enctype="multipart/form-data" name="form1" style="border:1px #9D063B solid; width:600px; padding:10px; margin:0;">
+    
+  <p>Provider:
+
+
+    <select name="providers">
+
+<option value="">Select MLS provider</option><option value="axcess">axcess</option><option value="axcess-MI-Bay-County">axcess-MI-Bay-County</option><option value="bradfordmls">bradfordmls</option><option value="calredd">calredd</option><option value="connectmls">connectmls</option><option value="ctinavigator">ctinavigator</option><option value="ezlistmls">ezlistmls</option><option value="flexmls">flexmls</option><option value="flexmls - 2 - 9">flexmls - 2 - 9</option><option value="Flexmls-ARMLS">Flexmls-ARMLS</option><option value="FlexMLS-GAV">FlexMLS-GAV</option><option value="Flexmls-Keystone">Flexmls-Keystone</option><option value="FlexMLS-LA-Deridder">FlexMLS-LA-Deridder</option><option value="FlexMLS-NEFAR">FlexMLS-NEFAR</option><option value="FlexMLS-Palm-Beach">FlexMLS-Palm-Beach</option><option value="FlexMLS-Roanoke">FlexMLS-Roanoke</option><option value="FlexMLS-SWMRIC">FlexMLS-SWMRIC</option><option value="flexmlsFLKEYS">flexmlsFLKEYS</option><option value="flexmlsgl">flexmlsgl</option><option value="FlexMLS_GAVR_CA">FlexMLS_GAVR_CA</option><option value="fusion">fusion</option><option value="fusion-2-9">fusion-2-9</option><option value="gamlspro">gamlspro</option><option value="genflexmls">genflexmls</option><option value="genflexmls-Space Coast">genflexmls-Space Coast</option><option value="gflexmls">gflexmls</option><option value="gflexmlsmil">gflexmlsmil</option><option value="gflexmlsww">gflexmlsww</option><option value="gflexmlsww-Arizona">gflexmlsww-Arizona</option><option value="gsmls">gsmls</option><option value="gsmlscomm">gsmlscomm</option><option value="gsmlsland">gsmlsland</option><option value="gsmlsmf">gsmlsmf</option><option value="homescape">homescape</option><option value="homeworks">homeworks</option><option value="innova">innova</option><option value="innova-1-8">innova-1-8</option><option value="Innova-CA-Calavares">Innova-CA-Calavares</option><option value="innova-redstone">innova-redstone</option><option value="innovasmyrna">innovasmyrna</option><option value="innovaten">innovaten</option><option value="innovia">innovia</option><option value="Innovia-1-8">Innovia-1-8</option><option value="Innovia-HernandoCounty-FL">Innovia-HernandoCounty-FL</option><option value="Innovia-N-Neuse">Innovia-N-Neuse</option><option value="InnoVia-TX-Nacogdoches">InnoVia-TX-Nacogdoches</option><option value="innoviabaycounty">innoviabaycounty</option><option value="innoviacham">innoviacham</option><option value="interfaceweb">interfaceweb</option><option value="ires">ires</option><option value="kinnexus">kinnexus</option><option value="List It">List It</option><option value="marketlinx">marketlinx</option><option value="Matrix">Matrix</option><option value="Matrix-AL">Matrix-AL</option><option value="Matrix-CNYIS">Matrix-CNYIS</option><option value="Matrix-Des_Moines">Matrix-Des_Moines</option><option value="matrix-honolulu">matrix-honolulu</option><option value="Matrix-HudsonGateWay">Matrix-HudsonGateWay</option><option value="matrix-promlslistings">matrix-promlslistings</option><option value="Matrix-REColorado-AppraiserExport">Matrix-REColorado-AppraiserExport</option><option value="matrixrec">matrixrec</option><option value="metrolist">metrolist</option><option value="mlspin">mlspin</option><option value="MLSpin-Custom">MLSpin-Custom</option><option value="mlxchange">mlxchange</option><option value="mlxchange-2-9">mlxchange-2-9</option><option value="mlxchange-roc2-9">mlxchange-roc2-9</option><option value="mlxchangeerie">mlxchangeerie</option><option value="mlxchangemf">mlxchangemf</option><option value="mlxchangeRI">mlxchangeRI</option><option value="mlxchange_ark_nw">mlxchange_ark_nw</option><option value="mlxtempo">mlxtempo</option><option value="mlxtempo-NC-TriadMLS">mlxtempo-NC-TriadMLS</option><option value="navica">navica</option><option value="navica-1-7">navica-1-7</option><option value="navica-AL-ShoalsMLS">navica-AL-ShoalsMLS</option><option value="navica-GA-Agusta">navica-GA-Agusta</option><option value="navica-GA-Athens">navica-GA-Athens</option><option value="navica-Harrisonburg">navica-Harrisonburg</option><option value="Navica-ID-Snake-River">Navica-ID-Snake-River</option><option value="Navica-OH-Ashland">Navica-OH-Ashland</option><option value="navica-Pueblo">navica-Pueblo</option><option value="Navica-SC-Sumter">Navica-SC-Sumter</option><option value="Navica-Selma,AL">Navica-Selma,AL</option><option value="navica-test">navica-test</option><option value="newtrendmls">newtrendmls</option><option value="Paragon">Paragon</option><option value="paragon-little-rock">paragon-little-rock</option><option value="paragon-no-dom">paragon-no-dom</option><option value="Paragon-SouthwestMLS">Paragon-SouthwestMLS</option><option value="paragon-user-defined-dom">paragon-user-defined-dom</option><option value="paragon-Williamette-Valley-OR">paragon-Williamette-Valley-OR</option><option value="paragonxl">paragonxl</option><option value="ParagonXL-1004MCfirst">ParagonXL-1004MCfirst</option><option value="paragonXL-Carolina">paragonXL-Carolina</option><option value="pdxmlsld">pdxmlsld</option><option value="pdxmlsmf">pdxmlsmf</option><option value="primeaccess">primeaccess</option><option value="primeaccesscondo">primeaccesscondo</option><option value="promatchdesk">promatchdesk</option><option value="promatchken">promatchken</option><option value="promatchmiddelta">promatchmiddelta</option><option value="promatchscioto">promatchscioto</option><option value="promatchweb">promatchweb</option><option value="promatchwebcbor">promatchwebcbor</option><option value="promatchwebdcg">promatchwebdcg</option><option value="promatchwebegypt2">promatchwebegypt2</option><option value="raarmls">raarmls</option><option value="rappatoni">rappatoni</option><option value="rappatoni-v">rappatoni-v</option><option value="rappatoniMO">rappatoniMO</option><option value="realtracs">realtracs</option><option value="realtracs-CONDO">realtracs-CONDO</option><option value="reInsight">reInsight</option><option value="REInsight-GeorgiaMLS">REInsight-GeorgiaMLS</option><option value="rexplorer-GMLS">rexplorer-GMLS</option><option value="RMLS-Portland MLS">RMLS-Portland MLS</option><option value="sefmlx">sefmlx</option><option value="solidearth">solidearth</option><option value="solidearthchipola">solidearthchipola</option><option value="solidearthpen">solidearthpen</option><option value="stratus">stratus</option><option value="Stratus - Long Island">Stratus - Long Island</option><option value="Stratus-Long-Island">Stratus-Long-Island</option><option value="Stratus-New">Stratus-New</option><option value="tempo">tempo</option><option value="tempo-houston">tempo-houston</option><option value="themls">themls</option><option value="trendmls">trendmls</option><option value="verify">verify</option><option value="wfrmls">wfrmls</option><option value="wrappatoni">wrappatoni</option>   
+ </select>
+
+
+  </p>
+  <p>Date analysis:
+      
+      <input name="DateOfAnalysis" type="text" size="20" value="">
+  </p>
+  <p>Count pending sales as settled:
+    <input name="PendingSaleFlag" type="radio" value="1" checked>
+  </p>
+  <p>Do not count pending sales as settled:
+    <input type="radio" name="PendingSaleFlag" value="0">
+  </p>
+  <p>Upload Market Listing File (required):
+    <input name="mls_file" type="file" size="60">
+  </p>
+  <p>Upload Condominium (optional):
+    <input name="condo_file" type="file" size="60">
+  </p>
+  <p>&nbsp;</p>
+  <p><font color="#FF0000"><strong>(Optional) </strong></font>If you have decoded
+    string of data, input it here for CC2.0 calculation.</p>
+  <p>
+    <textarea name="decoded_st" cols="50" rows="5"></textarea>
+  </p>
+  <p>
+    <input type="submit" name="Submit" value="Submit" class="btn btn-primary">
+  </p>
+</form>
+    
+  </body>
+</html>
+
